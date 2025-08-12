@@ -122,8 +122,7 @@ class BaseFeatures(ABC):
 
         except Exception as e:
             logger.exception(
-                f"Feature Set:{self.__class__.__name__}: Unexpected error occured on table: {self.database}.{self.schema}.{self.table_name}",
-                e,
+                f"Feature Set:{self.__class__.__name__}: Unexpected error occured on table: {self.database}.{self.schema}.{self.table_name}: {e}"
             )
             raise
 

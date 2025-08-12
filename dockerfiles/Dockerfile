@@ -23,13 +23,16 @@ RUN curl -sSL https://install.python-poetry.org | python3 -
 ENV PATH="/root/.local/bin:$PATH"
 
 RUN mkdir /modeling
-COPY configs /modeling/configs
-COPY MLGEOCORE_PUBLIC /modeling/modeling/
-COPY apps /modeling/apps/
+# COPY config /modeling/configs
+# COPY MLGEOCORE_PUBLIC /modeling/modeling/
+# COPY apps /modeling/apps/
 
 COPY poetry.lock pyproject.toml /modeling/
 
 COPY README.md /modeling
+
+COPY modeling /modeling/modeling
+COPY experiment_configs /modeling/experiment_configs
 
 WORKDIR /modeling
 

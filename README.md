@@ -12,7 +12,7 @@ GeoCore is a Python library for geospatial Machine Learning.
 
 Build the docker image 
 ```bash
-docker build -f dockerfiles/cpu/Dockerfile -t geocore-cpu .
+docker build -f dockerfiles/Dockerfile -t geocore-cpu .
 ```
 
 ### Without docker
